@@ -1,0 +1,9 @@
+{application, npr_lvl1,
+ [
+  {description, "lvl1"},
+  {vsn, git},
+  {modules, []},
+  {registered, []},
+  {applications, [kernel, stdlib, crypto, snmp]},
+  {env, []}
+ ]}.
