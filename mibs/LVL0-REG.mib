@@ -1,0 +1,34 @@
+---
+---
+---
+
+LVL0-REG DEFINITIONS ::= BEGIN
+
+IMPORTS
+    MODULE-IDENTITY, enterprises
+        FROM SNMPv2-SMI
+    ;
+
+lvlRegModule MODULE-IDENTITY
+    LAST-UPDATED "202009261630Z"
+    ORGANIZATION "'some org'"
+    CONTACT-INFO "'Contact: some contact'"
+    DESCRIPTION
+        "The root MIB module for LVL"
+    ::= { lvlModules 1 }
+
+
+
+-- Example Enterprise Number for Documentation use
+example OBJECT IDENTIFIER ::= { enterprises 32473 }
+
+lvl OBJECT IDENTIFIER ::= { example 1 }
+
+
+-- sub-tree for registrations (Modules information)
+lvlReg OBJECT IDENTIFIER ::= { lvl 1 }
+lvlModules OBJECT IDENTIFIER ::= { lvlReg 1 }
+
+-- the application subtree
+lvlApplications OBJECT IDENTIFIER ::= { lvl 2 }
+END

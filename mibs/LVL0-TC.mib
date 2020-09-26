@@ -1,0 +1,35 @@
+---
+---
+
+LVL0-TC DEFINITIONS ::= BEGIN
+IMPORTS
+    lvlModules
+        FROM LVL0-REG
+    MODULE-IDENTITY
+        FROM SNMPv2-SMI
+    TEXTUAL-CONVENTION
+        FROM SNMPv2-TC
+    ;
+
+lvlTcModule MODULE-IDENTITY
+    LAST-UPDATED "202009261630Z"
+    ORGANIZATION "'some org'"
+    CONTACT-INFO "'Contact: some contact'"
+    DESCRIPTION
+         " This MIB is part of the LVL MIB. It defines common
+         Textual Conventions used in other LVL mib modules."
+    ::= { lvlModules 2 }
+
+
+LvlFoo ::= TEXTUAL-CONVENTION
+    DISPLAY-HINT "512a"
+    STATUS current
+    DESCRIPTION ""
+    SYNTAX OCTET STRING (SIZE (1..512))
+
+LvlEnum ::= TEXTUAL-CONVENTION
+    STATUS	current
+    DESCRIPTION	""
+    SYNTAX	INTEGER { foo(1), bar(2), baz(3) }
+
+END
