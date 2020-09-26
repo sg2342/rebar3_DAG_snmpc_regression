@@ -1,0 +1,9 @@
+{application, cli_lvl2,
+ [
+  {description, "lvl2"},
+  {vsn, git},
+  {modules, []},
+  {registered, []},
+  {applications, [kernel, stdlib, crypto, snmp]},
+  {env, []}
+ ]}.

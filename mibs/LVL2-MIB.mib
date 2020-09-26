@@ -1,0 +1,24 @@
+---
+---
+---
+LVL2-MIB DEFINITIONS ::= BEGIN
+IMPORTS
+    MODULE-IDENTITY, OBJECT-TYPE
+        FROM SNMPv2-SMI
+    lvlModules, lvlApplications
+        FROM LVL0-REG
+    LvlFoo
+        FROM LVL0-TC
+    ;
+
+lvl2Module MODULE-IDENTITY
+    LAST-UPDATED "202009261630Z"
+    ORGANIZATION "'some org'"
+    CONTACT-INFO "'Contact: some contact'"
+    DESCRIPTION
+         " "
+    ::= { lvlModules 3 }
+
+
+
+END
